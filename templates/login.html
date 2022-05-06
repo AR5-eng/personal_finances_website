@@ -1,0 +1,76 @@
+<html>
+    <head lang="en">
+        <title>Login</title>
+        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/1abb3a3414.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: whitesmoke;
+            }
+            .placeholder {
+                flex: 1;
+            }
+            .main-container {
+                width: 20%;
+                background-color: white;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 0 15px 30px rgba(30, 30, 30, 0.25), 0 10px 10px rgba(30, 30, 30, 0.25);
+            }
+            h2 {
+                padding-bottom: 15px;
+            }
+            label {
+                position: absolute;
+                padding: 7px;
+                padding-left: 7px;
+                color: rgb(100, 100, 100);
+            }
+            input {
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+                padding: 5px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid whitesmoke;
+                align-items: center;
+            }
+            p {
+                padding-top: 30px;
+                font-size: 14px;
+                text-align: center;
+            }
+            a {
+                text-decoration: none;
+            }
+            .input-field-text {
+                padding-left: 30px;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="placeholder"></div>
+        <div class="main-container">
+            <h2>Login</h2>
+            <form method="post" action="/process-login">
+                <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                <input class="input-field-text" type="text" name="email" id="email" placeholder="Email" required />
+                <label for="password"><i class="fa-solid fa-key"></i></label>
+                <input class="input-field-text" type="password" name="password" id="password" placeholder="Password" required />
+                <input type="submit" value="Log in" />
+            </form>
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        </div>
+        <div class="placeholder"></div>
+    </body>
+</html>
