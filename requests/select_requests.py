@@ -1,5 +1,3 @@
-import logging
-
 from sqlalchemy import select
 
 from core.base import User
@@ -43,3 +41,11 @@ def check_user_name(user_name: str) -> bool:
         return True
     else:
         return False
+
+
+def get_info_about_user(user_email: str) -> list:
+    # По email пользователя получаю id
+    select_user_id = connection.execute(select(User.id, User.name).
+                                        where(User.email == user_email))
+    
+    return select_user_id.fetchone()
